@@ -382,7 +382,7 @@ New-ADUser -Name "Ali Demir" `
   -SamAccountName "ademir" `
   -UserPrincipalName "ademir@mydomain.com" `
   -Path "OU=Students,DC=mydomain,DC=com" `
-  -AccountPassword (ConvertTo-SecureString "P@ssw0rd2026!" -AsPlainText -Force) `
+  -AccountPassword (ConvertTo-SecureString $env:AD_DEFAULT_PASSWORD -AsPlainText -Force) `
   -Enabled $true `
   -ChangePasswordAtLogon $true
 ''')
