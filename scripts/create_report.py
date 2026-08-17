@@ -2,7 +2,7 @@
 import zipfile, os
 from xml.sax.saxutils import escape
 
-OUT = r'C:\Users\bahae\Desktop\okul\Engineering Of Windows Server Os\ActiveDirectory_Project_Report.docx'
+OUT = 'ActiveDirectory_Project_Report.docx'
 
 # ── XML helpers ────────────────────────────────────────────────────────────────
 
@@ -198,7 +198,7 @@ r"""# -----------------------------------------------------------------------
 # Creates domain users from a list of names in names.txt
 # -----------------------------------------------------------------------
 
-$PASSWORD_FOR_USERS   = "Password1"
+$PASSWORD_FOR_USERS = $env:AD_DEFAULT_PASSWORD
 $USER_FIRST_LAST_LIST = Get-Content .\names.txt
 
 # Convert plain-text password to SecureString
